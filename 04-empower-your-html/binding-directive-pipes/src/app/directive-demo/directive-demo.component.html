@@ -1,0 +1,27 @@
+<p>directive-demo works!</p>
+
+<!-- ### NgClass directive -->
+<!-- toggle the "special" class on/off with a property -->
+<div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+<!-- toggle the "saveable" class on/off depending on canSave -->
+<!-- toggle the "modified" class on/off depending on isUnchanged -->
+<!-- toggle the "special" class on/off depending on isSpecial -->
+<div
+  [ngClass]="{ saveable: canSave, modified: !isUnchanged, special: isSpecial }"
+>
+  NgClass test div
+</div>
+
+<label *ngIf="isSpecial">
+  What is your name ?
+  <input [(ngModel)]="name" />
+</label>
+
+<p>Hello {{ name }} !</p>
+
+<h4>NAMES</h4>
+<div *ngFor="let n of names; let i = index">
+  <p>{{ i }}: {{ n | uppercase }}</p>
+</div>
+
+<button (click)="displayLog()">Click Me!</button>

@@ -1,0 +1,30 @@
+<p>binding-demo works!</p>
+
+<!-- ### Text interpolation -->
+<h1>{{ textDisplayForInterpolation }}</h1>
+
+<!-- ### Property Binding -->
+<a [href]="'https://google.com'">Link</a> <br />
+<button [disabled]="isUnchanged">Disabled Button</button>
+
+<!-- ### Class Binding -->
+<p [class.font-red]="isWarning">This is a warning text!</p>
+
+<!-- ### Multiple Class Binding -->
+<!-- classExpression = "my-class-1 my-class-2 my-class-3" -->
+<!-- classExpression = {my-class-1: true, my-class-2: false} -->
+<!-- classExpression = ['my-class-1', 'my-class-2'] -->
+<p [class]="{'font-red': !isWarning, 'border-1': !isUnchanged}">
+  This is a text for multiple class binding
+</p>
+
+<!-- ### Style Binding -->
+<!-- Style properties can be written in dash-case or camelCase -->
+<h2 [style.background-color]="'red'">Style 1</h2>
+<h2 [style.backgroundColor]="'blue'">Style 2</h2>
+
+<!-- styleExpression = "width: 100px; height: 100px; background-color: red;" -->
+<!-- styleExpression = {width: '100px', height: '100px', backgroundColor: 'red'} -->
+<p [style]="{ width: '100px', height: '100px', backgroundColor: 'red' }">
+  Style 3
+</p>

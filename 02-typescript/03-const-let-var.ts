@@ -1,4 +1,6 @@
 let x = 10;
+x = 20;
+
 var y = 200.0; // ! do not use var, use let instead
 
 const t = [1, 2, 3];

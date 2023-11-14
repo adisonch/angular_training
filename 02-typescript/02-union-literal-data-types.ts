@@ -5,3 +5,5 @@ function printId(id: number | string) {
 function printText(s: string, alignment: "left" | "right" | "center") {
   // ...
 }
+
+printText("Hello, world", "center");
