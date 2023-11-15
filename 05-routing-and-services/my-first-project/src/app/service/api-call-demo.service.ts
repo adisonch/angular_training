@@ -7,6 +7,8 @@ import { Observable } from 'rxjs';
 })
 export class ApiCallDemoService {
 
+  sharedVariable: string = 'This is a shared variable';
+
   constructor(private http: HttpClient) {}
 
   getEmployees(): Observable<any> {
