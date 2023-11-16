@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header">Create Post</div>
+  <div class="card-body">
+    <form [formGroup]="postForm">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="email" class="form-control" formControlName="name" />
+      </div>
+      <div class="form-group">
+        <label>Post</label>
+        <textarea class="form-control" rows="3" formControlName="post">
+        </textarea>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary" (click)="submit()">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>
